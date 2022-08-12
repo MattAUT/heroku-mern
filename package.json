@@ -2,5 +2,10 @@
   "name": "heroku-mern",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "if [ $CLIENT_ENV ]; then yarn postinstall-client; elif [ $SERVER_ENV ]; then yarn postinstall-server; else echo no environment detected, please set CLIENT_ENV or SERVER_ENV; fi",
+    "postinstall-client": "cd frontend && yarn && yarn build",
+    "postinstall-server": "cd backend && yarn"
+  }
 }
