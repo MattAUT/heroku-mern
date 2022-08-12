@@ -1,1 +1,1 @@
-web:cd backend && npm run start
+web:cd sh -c 'cd ./backend/ && npm run start'
