@@ -6,6 +6,8 @@ import ShowBookList from "./components/show-book-list";
 import ShowBookDetails from "./components/show-book-details";
 import UpdateBookInfo from "./components/update-book-info";
 
+console.log(process.env.REACT_APP_API_URL);
+
 const App = () => {
   return (
     <BrowserRouter>

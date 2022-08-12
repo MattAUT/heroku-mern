@@ -53,7 +53,7 @@ class UpdateBookInfo extends Component {
     };
 
     axios
-      .put('http://localhost:8082/api/books/'+this.props.match.params.id, data)
+      .put(`${process.env.REACT_APP_API_URL}/api/books/` + this.props.match.params.id, data)
       .then(res => {
         this.props.history.push('/show-book/'+this.props.match.params.id);
       })
