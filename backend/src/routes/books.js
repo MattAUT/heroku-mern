@@ -12,6 +12,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
+  console.log(req.params);
   Book.findById(req.params.id)
     .then((book) => res.json(book))
     .catch((err) => res.status(404).json({ nobookfound: "No Book found" }));
